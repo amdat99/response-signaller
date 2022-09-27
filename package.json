@@ -1,0 +1,28 @@
+{
+  "name": "response-signaller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "source/server.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "start": "nodemon src/server.js",
+    "start-prod": "node dist/src/server.js",
+    "start2": "ts-node src/server.ts",
+    "dev2": "nodemon --exec ts-node src/server.ts",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "m": "knex migrate:make",
+    "s": "knex seed:make",
+    "server": "pm2 start dist/src/server.js",
+    "server-stop": "pm2 stop dist/src/server.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "uWebSockets.js": "uNetworking/uWebSockets.js#v20.10.0"
+  }
+}
